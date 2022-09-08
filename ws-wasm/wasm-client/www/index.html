@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <title>Hello wasm-pack!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"/>
+  </head>
+  <body>
+    <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
+    <script src="./bootstrap.js"></script>
+    <nav class="navbar navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Wasm-client</a>
+      </div>
+    </nav>
+    <div class="m-3" style="height: 600px;">
+      <div class="row">
+        <div class="col">
+          <div class="card border-info mb-3">
+            <div class="card-body">
+                <button type="button" class="btn btn-primary">添加</button>
+            </div>
+            <table class="table table-hover table-bordered table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col">ID</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Time</th>
+                      <th scope="col">Description</th>
+                      <th scope="col">操作</th>
+                    </tr>
+                  </thead>
+
+                  <tbody id="left-tbody"></tbody>
+            </table>
+            <div id="left"></div>
+          </div>
+        </div>
+        <div class="card border-info mb-3">
+            <div class="card-header">添加课程</div>
+            <div class="card-body">
+              <form class="row g-3 needs-validation" id="form">
+                  <div class="mb-3">
+                    <label for="name" class="form-label">课程名称</label>
+                    <input type="text" class="form-control" id="name" placeholder="课程名称"/>
+                    <div class="invalid-feedback">
+                        请填写课程名称！
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                  <label for="description" class="form-control">课程简介</label>
+                  <textarea class="form-control" id="description" rows="3"></textarea>
+                  </div>
+                  <div class="col-12">
+                      <button type="submit" class="btn btn-primary">提交</button>
+                  </div>
+              </form>
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
